@@ -11,6 +11,7 @@ import UIKit
 class MapsViewController: UITableViewController {
     public static let SEGUE_SHOW_MAPS = "showMaps"
     let apiService = MMApiService.shared
+    let activityIndicator = UIActivityIndicatorView(style: .large)
     
     var numberOfSections: Int = 1
     var maps: [MapListMap] = []
@@ -24,11 +25,16 @@ class MapsViewController: UITableViewController {
         super.viewDidLoad()
         
         self.tableView?.register(UINib(nibName: "MapTableViewCell", bundle: nil), forCellReuseIdentifier: "MapTableViewCell")
+        self.tableView.backgroundView = self.activityIndicator
         
+        self.tableView.isUserInteractionEnabled = false
+        self.activityIndicator.startAnimating()
         self.apiService.getMapList { (response) in
             self.maps.append(contentsOf: response)
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.tableView.isUserInteractionEnabled = true
+                self.activityIndicator.stopAnimating()
             }
         }
     }
@@ -65,8 +71,12 @@ class MapsViewController: UITableViewController {
         let tapLocation = sender.location(in: self.tableView)
         if let indexPath = self.tableView.indexPathForRow(at: tapLocation) {
             if let mapId = self.maps[indexPath[1]].id {
+                self.tableView.isUserInteractionEnabled = false
+                self.activityIndicator.startAnimating()
                 self.apiService.getMap(mapId: mapId) { (response) in
                     DispatchQueue.main.async {
+                        self.tableView.isUserInteractionEnabled = true
+                        self.activityIndicator.stopAnimating()
                         self.performSegue(
                             withIdentifier: IdeasViewController.SEGUE_SHOW_IDEAS,
                             sender: IdeasViewControllerSender(mapId: mapId, mapIdeas: response.ideas!, parendId: mapId)
