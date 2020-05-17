@@ -30,7 +30,7 @@
 		BDE068432446303100A8283C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE068422446303100A8283C /* LoginViewController.swift */; };
 		BDE068452446306A00A8283C /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE068442446306A00A8283C /* MapsViewController.swift */; };
 		BDE068482446328A00A8283C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDE068472446328A00A8283C /* WebKit.framework */; };
-		DC5370125ACC0ED5048D177E /* Info.plist.prod in Resources */ = {isa = PBXBuildFile; fileRef = DC537784CA03E6CF31C5E0EE /* Info.plist.prod */; };
+		DC5370125ACC0ED5048D177E /* Info.prod.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC537784CA03E6CF31C5E0EE /* Info.prod.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +59,7 @@
 		BDE068422446303100A8283C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BDE068442446306A00A8283C /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		BDE068472446328A00A8283C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		DC537784CA03E6CF31C5E0EE /* Info.plist.prod */ = {isa = PBXFileReference; lastKnownFileType = file.prod; path = Info.plist.prod; sourceTree = "<group>"; };
+		DC537784CA03E6CF31C5E0EE /* Info.prod.plist */ = {isa = PBXFileReference; lastKnownFileType = file.prod; path = Info.prod.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +144,7 @@
 				BDE068372446253200A8283C /* Assets.xcassets */,
 				BDE068392446253200A8283C /* LaunchScreen.storyboard */,
 				BDE0683C2446253200A8283C /* Info.plist */,
-				DC537784CA03E6CF31C5E0EE /* Info.plist.prod */,
+				DC537784CA03E6CF31C5E0EE /* Info.prod.plist */,
 			);
 			path = "Mindmeister TODO";
 			sourceTree = "<group>";
@@ -257,7 +257,7 @@
 				BDC43C1A24597437008A7BFE /* IdeaTableViewCell.xib in Resources */,
 				BDB086FE24577F1D0009BFF8 /* MapTableViewCell.xib in Resources */,
 				BDE068362446253200A8283C /* Main.storyboard in Resources */,
-				DC5370125ACC0ED5048D177E /* Info.plist.prod in Resources */,
+				DC5370125ACC0ED5048D177E /* Info.prod.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
